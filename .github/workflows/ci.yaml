@@ -1,0 +1,26 @@
+name: Ana Isabel
+ 
+on:
+  workflow_dispatch:
+ 
+jobs:
+  buildandtest:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Obter codigo
+        run: echo "Obter codigo."
+      - name: Instalar dependencias
+        run: echo "Instalar dependencias.
+      - name: Rodar Teste
+        run: echo "Rodar Teste"
+ 
+  deploy:
+    runs-on: ubuntu-latest
+    needs: buildandtest
+ 
+    steps:
+      - name: Deploy application
+        run: echo "Deploying application."
+ 
+
